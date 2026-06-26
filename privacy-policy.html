@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad — AUDIODIGITAL AUTOMATION CORP.</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(135deg, #111 0%, #1a1a2e 100%);
+      border-bottom: 1px solid #2a2a4a;
+      padding: 24px 40px;
+    }
+    header h1 { font-size: 1.4rem; color: #7c6af5; letter-spacing: 0.5px; }
+    header p  { font-size: 0.85rem; color: #888; margin-top: 4px; }
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 32px 80px;
+    }
+    h2 {
+      font-size: 1.1rem;
+      color: #a89cf5;
+      margin: 40px 0 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #222;
+    }
+    h2:first-of-type { margin-top: 0; }
+    p { margin-bottom: 14px; color: #c8c8c8; font-size: 0.95rem; }
+    ul { padding-left: 20px; margin-bottom: 14px; }
+    li { color: #c8c8c8; font-size: 0.95rem; margin-bottom: 6px; }
+    a  { color: #7c6af5; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .updated {
+      display: inline-block;
+      background: #1a1a2e;
+      border: 1px solid #2a2a4a;
+      border-radius: 6px;
+      padding: 6px 14px;
+      font-size: 0.8rem;
+      color: #888;
+      margin-bottom: 32px;
+    }
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.78rem;
+      color: #555;
+      border-top: 1px solid #1a1a1a;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>AUDIODIGITAL AUTOMATION CORP.</h1>
+  <p>Política de Privacidad</p>
+</header>
+
+<main>
+  <span class="updated">Última actualización: 25 de junio de 2026</span>
+
+  <h2>1. Información que recopilamos</h2>
+  <p>AUDIODIGITAL AUTOMATION CORP. ("la Aplicación") recopila únicamente la información necesaria para el funcionamiento del servicio de automatización de contenido:</p>
+  <ul>
+    <li><strong>Datos de cuenta:</strong> nombre de usuario, dirección de correo electrónico y contraseña cifrada.</li>
+    <li><strong>Tokens de plataformas sociales:</strong> tokens de acceso de TikTok, Instagram, YouTube y otras plataformas que el usuario conecta voluntariamente a través del proceso de autorización OAuth oficial de cada plataforma.</li>
+    <li><strong>Contenido generado:</strong> textos, guiones, metadatos e identificadores de publicaciones creadas automáticamente por el sistema.</li>
+    <li><strong>Datos de rendimiento:</strong> estadísticas de "me gusta", vistas e interacciones obtenidas mediante las APIs oficiales de cada plataforma.</li>
+    <li><strong>Registros de actividad (logs):</strong> registros técnicos del sistema para diagnóstico y auditoría interna.</li>
+  </ul>
+
+  <h2>2. Cómo usamos la información</h2>
+  <p>Usamos la información recopilada exclusivamente para:</p>
+  <ul>
+    <li>Publicar contenido en las plataformas sociales autorizadas por el usuario.</li>
+    <li>Calcular y distribuir ingresos generados mediante las reglas configuradas por el usuario.</li>
+    <li>Detectar tendencias y optimizar el contenido generado automáticamente.</li>
+    <li>Diagnosticar errores técnicos y mejorar el rendimiento del sistema.</li>
+    <li>Enviar notificaciones relacionadas con el estado del servicio cuando el usuario lo autorice.</li>
+  </ul>
+  <p>No vendemos, alquilamos ni compartimos datos personales con terceros con fines publicitarios o comerciales.</p>
+
+  <h2>3. Permisos de TikTok</h2>
+  <p>Cuando el usuario conecta su cuenta de TikTok, la Aplicación solicita los siguientes permisos a través del Login Kit oficial de TikTok:</p>
+  <ul>
+    <li><code>user.info.basic</code> — Acceso al perfil público (nombre de usuario, avatar).</li>
+    <li><code>video.publish</code> — Publicación de videos en la cuenta del usuario.</li>
+    <li><code>video.list</code> — Consulta de videos publicados para obtener estadísticas.</li>
+  </ul>
+  <p>Los tokens de TikTok se almacenan de forma cifrada y se utilizan únicamente para las acciones autorizadas por el usuario. El usuario puede revocar el acceso en cualquier momento desde la configuración de TikTok en <a href="https://www.tiktok.com/settings/" target="_blank">tiktok.com/settings</a>.</p>
+
+  <h2>4. Permisos de Instagram / Meta</h2>
+  <p>Cuando el usuario conecta su cuenta de Instagram Business, la Aplicación solicita acceso a través de la API Graph oficial de Meta para publicar Reels e imágenes. Los permisos utilizados incluyen:</p>
+  <ul>
+    <li><code>instagram_basic</code> — Lectura de información básica del perfil.</li>
+    <li><code>instagram_content_publish</code> — Publicación de contenido en la cuenta.</li>
+  </ul>
+  <p>Los tokens de Instagram se renuevan automáticamente antes de su vencimiento y se almacenan de forma segura. El usuario puede revocar el acceso desde <a href="https://www.instagram.com/accounts/manage_access/" target="_blank">instagram.com/accounts/manage_access</a>.</p>
+
+  <h2>5. Almacenamiento y seguridad</h2>
+  <p>Los datos se almacenan en una base de datos SQLite cifrada (o PostgreSQL en entornos de producción). Las contraseñas se cifran usando bcrypt. Los tokens de acceso se almacenan en texto cifrado mediante AES-256.</p>
+  <p>Implementamos medidas de seguridad estándar de la industria: HTTPS obligatorio, autenticación JWT, rate limiting y registro de auditoría de todas las operaciones sensibles.</p>
+
+  <h2>6. Retención de datos</h2>
+  <p>Los datos del usuario se conservan mientras la cuenta esté activa. Al solicitar la eliminación de la cuenta, se eliminan todos los datos personales dentro de los 30 días siguientes a la solicitud. Los registros técnicos se conservan durante 90 días por requisitos de auditoría.</p>
+
+  <h2>7. Derechos del usuario</h2>
+  <p>El usuario tiene derecho a:</p>
+  <ul>
+    <li>Acceder a todos sus datos almacenados (exportación disponible en el panel).</li>
+    <li>Corregir información incorrecta.</li>
+    <li>Solicitar la eliminación total de su cuenta y datos.</li>
+    <li>Revocar el acceso a cualquier plataforma social conectada en cualquier momento.</li>
+  </ul>
+
+  <h2>8. Cookies y rastreo</h2>
+  <p>La Aplicación utiliza únicamente cookies de sesión estrictamente necesarias para la autenticación. No utiliza cookies de rastreo, publicidad ni analytics de terceros.</p>
+
+  <h2>9. Menores de edad</h2>
+  <p>El servicio no está dirigido a personas menores de 13 años. No recopilamos conscientemente datos de menores. Si detectamos que un usuario menor de edad se ha registrado, eliminaremos su cuenta y datos de forma inmediata.</p>
+
+  <h2>10. Cambios en esta política</h2>
+  <p>Podemos actualizar esta política ocasionalmente. Los cambios significativos se notificarán al usuario por correo electrónico con al menos 14 días de anticipación. El uso continuado del servicio tras la notificación implica la aceptación de la política actualizada.</p>
+
+  <h2>11. Contacto</h2>
+  <p>Para preguntas sobre privacidad, solicitudes de eliminación de datos u otras consultas:</p>
+  <ul>
+    <li><strong>Email:</strong> <a href="mailto:leonardoolivieri843@gmail.com">leonardoolivieri843@gmail.com</a></li>
+    <li><strong>Responsable:</strong> AUDIODIGITAL AUTOMATION CORP.</li>
+  </ul>
+</main>
+
+<footer>
+  &copy; 2026 AUDIODIGITAL AUTOMATION CORP. — Todos los derechos reservados.
+</footer>
+
+</body>
+</html>
